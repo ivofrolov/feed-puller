@@ -1,0 +1,5 @@
+scrapy
+scrapyd-client
+spidermon[monitoring]
+feedgen
+readability-lxml

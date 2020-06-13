@@ -1,0 +1,24 @@
+import scrapy
+from scrapy.linkextractors import LinkExtractor
+
+from feedpull.spiders import FeedSpider
+
+
+class $classname(FeedSpider):
+    name = '$name'
+
+    feed_id = 'http://$domain'
+    feed_title = '$name'
+
+    allowed_domains = ['$domain']
+    start_urls = ['http://$domain']
+
+    link_extractors = (
+        LinkExtractor(allow=r'Items/'),
+    )
+
+    selectors = {
+        'title': '',
+        'content': '',
+        # 'img': '',
+    }
