@@ -16,7 +16,7 @@ class DiytubesSpider(FeedSpider):
     link_extractors = (
         LinkExtractor(
             allow=r'index\.php\?route=product/product&product_id=',
-            restrict_css='#content > div:nth-child(1)'),
+            restrict_css='.box-product'),
     )
 
     selectors = {
