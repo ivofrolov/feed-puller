@@ -14,7 +14,7 @@ class PjrcSpider(FeedSpider):
     start_urls = ['https://www.pjrc.com/']
 
     link_extractors = (
-        LinkExtractor(deny=[r'/forum', r'/blog/$'], restrict_css='#primary'),
+        LinkExtractor(deny=[r'/store', r'/forum', r'/blog/$'], restrict_css='#primary'),
     )
 
     selectors = {
