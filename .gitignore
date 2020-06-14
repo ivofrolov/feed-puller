@@ -1,1 +1,8 @@
+__pycache__/
+
 *.sublime-*
+
+local_settings.py
+scrapy.cfg
+
+tmp/

@@ -20,5 +20,6 @@ build: ## build docker image
 
 clean: ## remove python cache
 	find . \( -name \*.pyc -or -name \*.pyo -or -name __pycache__ \) -delete
+	test -d tmp && rm tmp/*
 
 .PHONY .SILENT: help spider crawl deploy build clean
