@@ -20,5 +20,5 @@ class ThonkSpider(FeedSpider):
     selectors = {
         'title': '.product_title::text',
         'content': '#tab-description',
-        'img': '.woocommerce-product-gallery__image::attr(data-thumb)',
+        'img': '.woocommerce-product-gallery__image>a::attr(href)',
     }
