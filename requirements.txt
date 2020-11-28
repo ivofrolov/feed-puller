@@ -1,5 +1,5 @@
-scrapy
-scrapyd-client
-spidermon[monitoring]
-feedgen
-readability-lxml
+scrapy==2.4.1
+scrapyd-client==1.2.0a1
+spidermon[monitoring]==1.14.0
+feedgen==0.9.0
+readability-lxml==0.8.1
