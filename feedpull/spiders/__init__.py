@@ -12,8 +12,7 @@ class FeedSpider(CrawlSpider):
     selectors = {}
 
     def __init__(self, *args, **kwargs):
-        self.rules = [Rule(ext, callback='parse_item')
-                      for ext in self.link_extractors]
+        self.rules = [Rule(ext, callback='parse_item') for ext in self.link_extractors]
         super().__init__(*args, **kwargs)
 
     def parse_item(self, response):

@@ -11,3 +11,4 @@ def remove_uri_credentials(record: logging.LogRecord):
 
 
 logging.getLogger('scrapy.extensions.feedexport').addFilter(remove_uri_credentials)
+logging.getLogger('readability.readability').setLevel(logging.WARNING)
