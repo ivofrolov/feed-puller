@@ -36,7 +36,7 @@ ROBOTSTXT_OBEY = False
 #COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
-#TELNETCONSOLE_ENABLED = False
+TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
 # DEFAULT_REQUEST_HEADERS = {
@@ -46,33 +46,32 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-SPIDER_MIDDLEWARES = {
-    'feedpull.middlewares.DeltaFetch': 100,
-}
+# SPIDER_MIDDLEWARES = {
+    
+# }
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    'feedpull.middlewares.FeedPullDownloaderMiddleware': 543,
+    
 # }
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
 EXTENSIONS = {
     'spidermon.contrib.scrapy.extensions.Spidermon': 500,
-    #    'scrapy.extensions.telnet.TelnetConsole': None,
 }
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    # 'feedpull.pipelines.ItemPipeline': 300,
-}
+# ITEM_PIPELINES = {
+    
+# }
 
 # Additional feed exporters
 # See https://docs.scrapy.org/en/latest/topics/feed-exports.html
 FEED_EXPORTERS = {
-    'atom': 'feedpull.exporters.AtomItemExporter'
+    'atom': 'feedpull.exporters.AtomItemExporter',
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -90,20 +89,15 @@ AUTOTHROTTLE_ENABLED = True
 
 # Enable and configure HTTP caching (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
-#HTTPCACHE_ENABLED = True
-#HTTPCACHE_EXPIRATION_SECS = 0
-#HTTPCACHE_DIR = 'httpcache'
-#HTTPCACHE_IGNORE_HTTP_CODES = []
-#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+HTTPCACHE_ENABLED = True
+HTTPCACHE_POLICY = 'scrapy.extensions.httpcache.RFC2616Policy'
+HTTPCACHE_EXPIRATION_SECS = 0
+HTTPCACHE_DIR = 'httpcache'
+HTTPCACHE_IGNORE_HTTP_CODES = []
+HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+HTTPCACHE_GZIP = False
 
 TEMPLATES_DIR = 'templates'
-
-# Deltafetch
-# https://github.com/scrapy-plugins/scrapy-deltafetch
-DELTAFETCH_ENABLED = True
-# DELTAFETCH_DIR = 'deltafetch'
-# supported spider arguments: scrapy crawl example -a deltafetch_reset=1
-# DELTAFETCH_RESET = False
 
 # Spidermon
 # https://spidermon.readthedocs.io/en/latest/settings.html
